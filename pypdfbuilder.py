@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/zopt/src/PDF/.venv/bin/python
 
 import os
 import sys
@@ -393,7 +393,7 @@ class RotateTabManager:
             out_pdf = PdfFileWriter()
             for p in range(self.__rotate_file_info.pages):
                 if p in range(*page_range):
-                    if ROTATE_DEGREES[self.__rotate_amount_widget.get()] != 0:            
+                    if ROTATE_DEGREES[self.__rotate_amount_widget.get()] != 0:
                         out_pdf.addPage(in_pdf.getPage(p).rotateClockwise(
                             ROTATE_DEGREES[self.__rotate_amount_widget.get()]))
                     else:
